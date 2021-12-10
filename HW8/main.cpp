@@ -150,7 +150,8 @@ int main ()
         int * f;
         f = new int [XX * YY];
         reset(f);
-        int turn = 0;
+        srand(static_cast<unsigned int>(time(0)));
+        int turn = rand() % 8;
 
        while (checkwin(f) != 'X' && checkwin(f) !='O')
         {
